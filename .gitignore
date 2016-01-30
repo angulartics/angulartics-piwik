@@ -1,0 +1,7 @@
+/node_modules
+/components
+/dist
+/*.sublime-*
+npm-debug.log
+.idea
+.tm_properties
