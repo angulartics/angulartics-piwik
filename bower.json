@@ -1,7 +1,6 @@
 {
   "name": "angulartics-piwik",
   "description": "Piwik plugin for Angulartics",
-  "version": "1.0.0",
   "authors": [
     "Ivan Nolasco <ivan.nolasco@me.com>"
   ],
