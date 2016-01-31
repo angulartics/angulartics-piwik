@@ -30,6 +30,9 @@
   "peerDependencies": {
     "angulartics": "*"
   },
+  "dependencies": {
+    "angulartics": "*"
+  },
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-bump": "0.0.15",
