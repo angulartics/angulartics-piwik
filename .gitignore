@@ -1,6 +1,5 @@
 /node_modules
-/components
-/dist
+/bower_components
 /*.sublime-*
 npm-debug.log
 .idea

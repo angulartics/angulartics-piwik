@@ -1,9 +1,14 @@
 # angulartics-piwik
 
+[![Bower version](https://badge.fury.io/bo/angulartics-piwik.svg)](https://badge.fury.io/bo/angulartics-piwik)
 
-Provides piwik analytics support for [angulartics](http://angulartics.github.io)
+Piwik plugin for [angulartics](http://angulartics.github.io)
 
 ## Install
+
+First make sure you've read installation and setup instructions for [Angulartics](https://github.com/angulartics/angulartics#install).
+
+Then you can install this package either with `npm` or with `bower`.
 
 ### npm
 
@@ -13,13 +18,16 @@ npm install angulartics-piwik
 
 ### Bower
 
-```
+```shell
 bower install angulartics-piwik
 ```
+Add the `<script>` to your `index.html`:
 
-## Setup
+```html
+<script src="/bower_components/angulartics-piwik/dist/angulartics-piwik.min.js"></script>
+```
 
-Add `angulartics.piwik` to your module
+Then add `angulartics.piwik` to your module
 
     angular.module('myApp', ['angulartics', 'angulartics.piwik'])
 
@@ -69,7 +77,7 @@ Default angulartics page and event tracking
 
 ### Unsupported angulartics trackers
 
-The following angulartics tracker functions have no piwik equivalent, and as such, are not supported.
+The following angulartics tracker functions have no piwik equivalent, and as such, are not supported. You can use `setCustomVariable()` with a `'visit'` scope for per-user properties
 
     $analytics.setAlias(alias)
     $analytics.setUserProperties(properties)

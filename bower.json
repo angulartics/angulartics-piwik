@@ -1,8 +1,22 @@
 {
   "name": "angulartics-piwik",
+  "description": "Piwik plugin for Angulartics",
   "version": "1.0.0",
+  "authors": [
+    "Ivan Nolasco <ivan.nolasco@me.com>"
+  ],
+  "license": "MIT",
   "main": [
     "src/angulartics-piwik.js"
+  ],
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "node_modules",
+    "test",
+    "example",
+    "package.json",
+    "Gruntfile.js"
   ],
   "dependencies": {
     "angular": ">= 1.1.5",
