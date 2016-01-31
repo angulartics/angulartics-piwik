@@ -29,7 +29,7 @@ module.exports = function(grunt) {
 
       karma: {
          unit: {
-            configFile: 'karma.conf.js',
+            configFile: 'test/karma.conf.js',
             singleRun: true
          }
       },
@@ -61,7 +61,7 @@ module.exports = function(grunt) {
 
    grunt.registerTask('test', ['jshint', 'karma']);
 
-   grunt.registerTask('default', ['jshint', 'karma', 'uglify:predist', 'concat:dist', 'uglify:dist']);
+   grunt.registerTask('default', ['jshint', 'karma', 'uglify:dist']);
 
    grunt.registerTask('release', 'Release a new version, push it and publish it', function(target) {
 
