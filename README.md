@@ -12,27 +12,23 @@ Then you can install this package either with `npm` or with `bower`.
 
 ### npm
 
-```shell
-npm install angulartics-piwik
-```
+    npm install --save angulartics-piwik
+
 
 ### Bower
 
-```shell
-bower install angulartics-piwik
-```
+    bower install --save angulartics-piwik
+
 Add the `<script>` to your `index.html`:
 
-```html
-<script src="/bower_components/angulartics-piwik/dist/angulartics-piwik.min.js"></script>
-```
+    <script src="/bower_components/angulartics-piwik/dist/angulartics-piwik.min.js"></script>
 
-Then add `angulartics.piwik` to your module
+
+Then add `angulartics.piwik` to your module:
 
     angular.module('myApp', ['angulartics', 'angulartics.piwik'])
 
-Set piwik tracker code as you would normally with piwik somewhere on your page, but make
-sure that you remove or comment the initial pageview tracking line (Angulartics will track the page when the first state is loaded).
+Next, set the piwik tracker code as you would normally with piwik somewhere on your page, per [piwik's tracking javascript guide](http://developer.piwik.org/guides/tracking-javascript-guide):
 
     <!-- Piwik -->
     <script type="text/javascript">
@@ -40,15 +36,19 @@ sure that you remove or comment the initial pageview tracking line (Angulartics 
       // _paq.push(['trackPageView']);
       _paq.push(['enableLinkTracking']);
       (function() {
-        var u="//piwik.yourdomain.com/";
+        var u="//{$PIWIK_URL}/";
         _paq.push(['setTrackerUrl', u+'piwik.php']);
-        _paq.push(['setSiteId', 1]);
+        _paq.push(['setSiteId', {$IDSITE}]);
         var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
         g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
       })();
     </script>
-    <noscript><p><img src="//piwik.yourdomain.com/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
+    <noscript><p><img src="//piwik.yourdomain.com/piwik.php?idsite={$IDSITE}" style="border:0;" alt="" /></p></noscript>
     <!-- End Piwik Code -->
+
+In this tracking code, `{$PIWIK_URL}` would be replaced by your piwik URL and `{$IDSITE}` would be replaced by the idsite of the website you are tracking in piwik.
+
+NOTE: Make sure that you remove or comment the initial pageview tracking line (`_paq.push(['trackPageView']);`), as shown in the code snippet above. Angulartics will track the page automatically when the first state is loaded, so this initial page track is unnecessary.
 
 That's it! Refer to the [angulartics](http://angulartics.github.io) docs for more details on the basic tracking functions
 
