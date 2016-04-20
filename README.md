@@ -50,7 +50,10 @@ In this tracking code, `{$PIWIK_URL}` would be replaced by your piwik URL and `{
 
 NOTE: Make sure that you remove or comment the initial pageview tracking line (`_paq.push(['trackPageView']);`), as shown in the code snippet above. Angulartics will track the page automatically when the first state is loaded, so this initial page track is unnecessary.
 
-That's it! Refer to the [angulartics](http://angulartics.github.io) docs for more details on the basic tracking functions
+That's it! Refer to the [angulartics](http://angulartics.github.io) docs for more details on the basic tracking functions.
+
+*NOTE: If Piwik does not register your routes properly, check the `Page URL fragments tracking` setting and enable `Keep Page URL fragments when tracking Page URLs` as described in [Piwik's FAQs](https://piwik.org/faq/how-to/faq_188/).*
+
 
 ## API
 
