@@ -59,6 +59,16 @@
                     }
                 };
 
+                // track outlink or download
+                // linkType is 'link' or 'download', 'link' by default
+                // trackLink(url, [linkType]);
+                $analyticsProvider.api.trackLink = function(url, linkType) {
+                    var type = linkType || 'link';
+                    if ($window._paq) {
+                        $window._paq.push(['trackLink', url, linkType]);
+                    }
+                };
+
                 // Set default angulartics page and event tracking
 
                 // $analytics.setUsername(username)
