@@ -68,6 +68,10 @@ Set a custom variable. scope can be either 'visit' or 'page'. Defaults to 'page'
 
 Log an internal site search for a specific keyword, in an optional category, specifying the optional count of search results in the page.
 
+###trackLink(url, [linkType])
+
+Manually log a click from your own code. url is the full URL which is to be tracked as a click.
+linkType can either be 'link' for an outlink or 'download' for a download, 'link' by default.
 
 ###trackGoal(goalID, [revenue])
 
