@@ -65,7 +65,7 @@
                 $analyticsProvider.api.trackLink = function(url, linkType) {
                     var type = linkType || 'link';
                     if ($window._paq) {
-                        $window._paq.push(['trackLink', url, linkType]);
+                        $window._paq.push(['trackLink', url, type]);
                     }
                 };
 
