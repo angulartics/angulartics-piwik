@@ -50,6 +50,15 @@
                     }
                 };
 
+                // scope: visit or page. Defaults to 'page'
+                $analyticsProvider.api.deleteCustomVariable = function(varIndex, scope) {
+
+                    if ($window._paq) {
+                        scope = scope || 'page';
+                        $window._paq.push(['deleteCustomVariable', varIndex, scope]);
+                    }
+                };
+
                 // trackSiteSearch(keyword, category, [searchCount])
                 $analyticsProvider.api.trackSiteSearch = function(keyword, category, searchCount) {
 

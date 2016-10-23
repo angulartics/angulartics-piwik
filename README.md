@@ -74,6 +74,10 @@ Delete a previously set custom dimension.
 
 Set a custom variable. scope can be either 'visit' or 'page'. Defaults to 'page'.
 
+###deleteCustomVariable(index, [scope])
+
+Delete a previously set custom variable. scope can be either 'visit' or 'page'. Defaults to 'page'.
+
 
 ###trackSiteSearch(keyword, [category], [count])
 
