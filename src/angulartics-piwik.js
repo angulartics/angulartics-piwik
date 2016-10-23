@@ -25,6 +25,22 @@
 
                 // Add piwik specific trackers to angulartics API
 
+                // Requires the CustomDimensions plugin for Piwik.
+                $analyticsProvider.api.setCustomDimension = function(dimensionId, value) {
+
+                    if ($window._paq) {
+                        $window._paq.push(['setCustomDimension', dimensionId, value]);
+                    }
+                };
+
+                // Requires the CustomDimensions plugin for Piwik.
+                $analyticsProvider.api.deleteCustomDimension = function(dimensionId) {
+
+                    if ($window._paq) {
+                        $window._paq.push(['deleteCustomDimension', dimensionId]);
+                    }
+                };
+
                 // scope: visit or page. Defaults to 'page'
                 $analyticsProvider.api.setCustomVariable = function(varIndex, varName, value, scope) {
 
