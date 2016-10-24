@@ -59,9 +59,24 @@ That's it! Refer to the [angulartics](http://angulartics.github.io) docs for mor
 
 piwik specific trackers. For more details on this functions, see the [piwik JavaScript Tracking Client API docs](http://developer.piwik.org/api-reference/tracking-javascript)
 
+###setCustomDimension(dimensionId, value)
+
+Set a custom dimension. Custom dimensions are recommended over custom variables, but require the [Custom Dimensions](https://plugins.piwik.org/CustomDimensions) plugin.
+
+See: https://piwik.org/faq/general/faq_21117/
+
+###deleteCustomDimension(dimensionId)
+
+Delete a previously set custom dimension.
+
+
 ###setCustomVariable(index, name, value, [scope])
 
 Set a custom variable. scope can be either 'visit' or 'page'. Defaults to 'page'.
+
+###deleteCustomVariable(index, [scope])
+
+Delete a previously set custom variable. scope can be either 'visit' or 'page'. Defaults to 'page'.
 
 
 ###trackSiteSearch(keyword, [category], [count])
