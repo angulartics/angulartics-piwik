@@ -139,14 +139,11 @@
                 });
                 
               /**
-               * Exception Track Event in GA
                * @name exceptionTrack
                * Sugar on top of the eventTrack method for easily handling errors
                *
                * @param {object} error An Error object to track: error.toString() used for event 'action', error.stack used for event 'label'.
                * @param {object} cause The cause of the error given from $exceptionHandler, not used.
-               *
-               * @link https://developers.google.com/analytics/devguides/collection/analyticsjs/events
                */
               $analyticsProvider.registerExceptionTrack(function (error, cause) {
                   if ($window._paq) {
