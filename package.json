@@ -1,7 +1,7 @@
 {
   "name": "angulartics-piwik",
   "description": "Piwik plugin for Angulartics",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "filename": "./src/angulartics-piwik.min.js",
   "main": "./src/angulartics-piwik.js",
   "homepage": "http://angulartics.github.io/",
