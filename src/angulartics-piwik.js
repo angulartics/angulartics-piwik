@@ -118,7 +118,7 @@
 
                     if ($window._paq) {
                         $window._paq.push(['setDocumentTitle', $window.document.title]);
-                        $window._paq.push(['setCustomUrl', path]);
+                        $window._paq.push(['setCustomUrl',locationObj.$$absUrl]);
                         $window._paq.push(['trackPageView']);
                     }
                 });
